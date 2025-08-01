@@ -1,0 +1,50 @@
+# Virtual Environment Setup Guide
+# ================================
+
+## Method 1: Using requirements.txt (Recommended)
+# This method ensures exact package versions and reproducible environment
+
+# Create virtual environment
+python3 -m venv .venv
+
+# Activate virtual environment (Linux/macOS)
+source .venv/bin/activate
+
+# Upgrade pip to latest version
+pip install --upgrade pip
+
+# Install all packages from requirements.txt
+pip install -r requirements.txt
+
+# Verify installation
+pip list
+
+## Method 2: Manual Installation (Alternative)
+# This method installs core packages manually
+
+# Create and activate virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Upgrade pip
+pip install --upgrade pip
+
+# Install core packages
+pip install pandas numpy matplotlib requests pandas_ta kiteconnect backtesting mplfinance pyotp selenium twilio watchdog dash
+
+# Verify installation
+pip list
+
+## Deactivating Virtual Environment
+# When done working, deactivate the environment:
+deactivate
+
+## Updating requirements.txt
+# If you install new packages, update requirements.txt:
+pip freeze > requirements.txt
+
+## Notes:
+# - Always activate the virtual environment before working on the project
+# - Use Method 1 (requirements.txt) for consistent environment setup
+# - The requirements.txt file contains all dependencies with exact versions
+# - Created: $(date)

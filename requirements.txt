@@ -1,0 +1,14 @@
+# LangChain packages - let pip find compatible versions
+langchain
+langchain-community
+langchain-openai
+langchain_pinecone
+unstructured[md]
+
+# Other dependencies
+pinecone-client
+openai
+uvicorn
+fastapi
+pypdf
+python-dotenv
