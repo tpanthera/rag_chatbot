@@ -12,7 +12,7 @@ spec:
       type: REST
       expose:
         resources:
-          - path: /ask
+          - path: /
             method: POST
   run:
     command:
