@@ -1,20 +1,22 @@
-apiVersion: core.choreo.dev/v1beta1
+apiVersion: choreo.dev/v1beta1
 kind: Component
 metadata:
   name: hemantgpt
-  description: "RAG Chatbot API"
   annotations:
-    "choreo.dev/project-id": "be3a0193-32a3-4647-b175-d0c2a7c5370e"
+    choreo.dev/build-preset: python
 spec:
   type: Service
-  build:
-    buildPack: Python
-    projectDir: /
-  
-  # This new 'run' section gives a direct command to the container
+  inbound:
+    - name: hemantgpt-api
+      port: 8080
+      type: REST
+      expose:
+        resources:
+          - path: /ask
+            method: POST
   run:
     command:
-      - "uvicorn"
-      - "app:app"
-      - "--host=0.0.0.0"
-      - "--port=8080"
+      - uvicorn
+      - app:app
+      - --host=0.0.0.0
+      - --port=8080
