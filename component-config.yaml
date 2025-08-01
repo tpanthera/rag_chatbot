@@ -7,3 +7,4 @@ spec:
       type: REST
       networkVisibility: Public
       context: /
+      schemaFilePath: /openapi.json
