@@ -1,0 +1,12 @@
+apiVersion: core.choreo.dev/v1beta1
+kind: Component
+metadata:
+  name: hemantgpt
+  description: "RAG Chatbot API"
+  annotations:
+    "choreo.dev/project-id": "be3a0193-32a3-4647-b175-d0c2a7c5370e" # Your Project ID
+spec:
+  type: Service
+  build:
+    buildPack: Python
+    projectDir: /
