@@ -3,7 +3,7 @@ kind: ComponentConfig
 spec:
   inbound:
     - name: RAG API
-      port: 8080
+      port: 8501
       type: REST
       networkVisibility: Public
       context: /
