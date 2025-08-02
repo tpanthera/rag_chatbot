@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv() # This line loads the variables from .env
+
 import os
 from fastapi import FastAPI
 from pydantic import BaseModel
