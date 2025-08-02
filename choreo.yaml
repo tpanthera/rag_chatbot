@@ -7,16 +7,17 @@ metadata:
 spec:
   type: Service
   inbound:
-    - name: hemantgpt-api
+    - name: hemantgpt-ui
       port: 8501
       type: REST
       expose:
         resources:
           - path: /
-            method: POST
+            method: GET
   run:
     command:
-      - uvicorn
-      - app:app
-      - --host=0.0.0.0
-      - --port=8080
+      - streamlit
+      - run
+      - chat_ui.py
+      - --server.port=8501
+      - --server.address=0.0.0.0
