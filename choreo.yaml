@@ -8,7 +8,7 @@ spec:
   type: Service
   inbound:
     - name: hemantgpt-api
-      port: 8080
+      port: 8501
       type: REST
       expose:
         resources:
