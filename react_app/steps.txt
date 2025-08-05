@@ -1,0 +1,6 @@
+1) first, new terminal window
+python backend_app.py
+2) second, new terminal window
+python -m http.server 8000
+3) Use the App
+http://localhost:8000

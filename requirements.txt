@@ -12,3 +12,5 @@ uvicorn
 fastapi
 pypdf
 python-dotenv
+Flask 
+Flask-Cors
