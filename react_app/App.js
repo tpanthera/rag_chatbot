@@ -40,8 +40,9 @@ function App() {
     setIsLoading(true);
 
     // --- API Call to the Flask Backend ---
+    
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/chat', {
+      const response = await fetch('https://088b352a-bd78-4e25-afb4-37fadc8527ef.e1-us-east-azure.choreoapps.dev/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: currentInput }),
